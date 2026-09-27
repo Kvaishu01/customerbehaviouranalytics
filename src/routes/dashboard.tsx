@@ -26,7 +26,7 @@ export const Route = createFileRoute("/dashboard")({
   component: Dashboard,
 });
 
-function Kpi({ label, value, note, tone = "glow" }: { label: string; value: string; note?: string; tone?: "glow" | "negative" | "mist" }) {
+function Kpi({ label, value, note, tone = "glow" }: { label: string; value: string; note?: string | undefined; tone?: "glow" | "negative" | "mist" | undefined }) {
   const toneClass = tone === "negative" ? "text-negative" : tone === "mist" ? "text-mist" : "text-glow";
   return (
     <div className="rounded-2xl glass p-5">
